@@ -38,10 +38,6 @@ export interface CalendarProperties {
 	minDate?: Date;
 	/** Customize or internationalize full month names and abbreviations */
 	monthNames?: { short: string; long: string }[];
-	/** Function called when the month changes */
-	onMonthChange?(month: number): void;
-	/** Function called when the year changes */
-	onYearChange?(year: number): void;
 	/** Format the displayed current month and year */
 	renderMonthLabel?(month: number, year: number): string;
 	/** Format the weekday column headers */
