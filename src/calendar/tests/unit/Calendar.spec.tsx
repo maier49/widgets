@@ -470,11 +470,6 @@ registerSuite('Calendar', {
 			const h = harness(() => <Calendar {...properties} />);
 
 			h.expect(() => expected(false, 4, 'Bar', true, 'foo'));
-			properties = {
-				initialMonth: testDate.getMonth(),
-				initialYear: testDate.getFullYear()
-			};
-			h.expect(expected);
 		},
 
 		'Click to select date'() {
@@ -649,8 +644,6 @@ registerSuite('Calendar', {
 			const h = harness(() => <Calendar {...properties} />);
 
 			// Rollover year and continue to June
-			console.log('Starts here');
-			debugger;
 			h.trigger('@date-0', 'onKeyDown', Keys.Up, () => {});
 			h.trigger('@date-0', 'onKeyDown', Keys.PageUp, () => {});
 			h.trigger('@date-0', 'onKeyDown', Keys.Up, () => {});
